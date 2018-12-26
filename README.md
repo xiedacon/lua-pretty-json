@@ -1,6 +1,6 @@
 # lua-pretty-json
 
-[!MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/xiedacon/lua-pretty-json/blob/master/LICENSE)
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/xiedacon/lua-pretty-json/blob/master/LICENSE)
 
 ## Requirements
 
