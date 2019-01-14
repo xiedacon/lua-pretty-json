@@ -5,6 +5,7 @@ local Serializer = require "pretty.json.serializer"
 local Parser = require "pretty.json.parser"
 
 local json = {
+    _VERSION = "0.1",
     null = Constant.NULL
 }
 
