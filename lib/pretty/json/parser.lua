@@ -18,7 +18,9 @@ local Parser = {}
 
 setmetatable(Parser, {
     __call = function(self, opts)
-        local parser = {}
+        local parser = {
+            without_null = opts.without_null
+        }
 
         setmetatable(parser, { __index = Parser })
 
@@ -126,7 +128,7 @@ function Parser:table(str, pos)
     end
 end
 
-function Parser:json(str, pos, without_null)
+function Parser:json(str, pos)
     local first = false
     local val
     local c
@@ -158,7 +160,7 @@ function Parser:json(str, pos, without_null)
     end
 
     if first and pos <= #str then syntax_error(str, pos) end
-    if without_null and val == NULL then val = nil end
+    if self.without_null and val == NULL then val = nil end
 
     return val, pos
 end

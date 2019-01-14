@@ -28,7 +28,7 @@ function json.stringify(obj, replacer, space, print_address)
 end
 
 function json.parse(str, without_null)
-    return Parser():json(str, 1, without_null)
+    return Parser({ without_null = without_null }):json(str, 1)
 end
 
 return json
